@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotapanjeBrodova", "PotapanjeBrodova\PotapanjeBrodova.csproj", "{18321674-C091-4BC8-817D-475418BC4B8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{8462534B-930E-4A4C-8A57-FC895DFFE364}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPotapanjeBrodova", "UnitTests\TestPotapanjeBrodova.csproj", "{8462534B-930E-4A4C-8A57-FC895DFFE364}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D14898F8-D8CE-428D-91D3-74F5E64E22B5}"
 	ProjectSection(SolutionItems) = preProject
