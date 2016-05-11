@@ -60,7 +60,7 @@ namespace UnitTests
         {
             Topništvo t = new Topništvo(10, 10, duljineBrodova);
             t.ObradiGađanje(RezultatGađanja.Promašaj);
-            //Assert.IsTrue(new Mreža(10, 10, DajSlobodnaPolja().Contains(t.UputiPucanj()));
+            Assert.IsTrue(new Mreža(10, 10).DajSlobodnaPolja().Contains(t.UputiPucanj()));
         }
     }
 }

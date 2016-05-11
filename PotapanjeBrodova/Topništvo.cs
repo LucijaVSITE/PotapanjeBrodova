@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -30,15 +31,32 @@ namespace PotapanjeBrodova
         public void ObradiGađanje(RezultatGađanja rezultat)
         {
             //DZ da testovi prođu
-            if (rezultat == RezultatGađanja.Potonuće)
-                PromjeniTaktikuUNapipavanje();
-            else 
-            if (rezultat == RezultatGađanja.Pogodak)
+            switch (rezultat)
             {
-                if (TrenutnaTaktika == TaktikaGađanja.Napipavanje)
-                    PromjeniTaktikuUOkruživanje();
-                else if (TrenutnaTaktika == TaktikaGađanja.Okruživanje)
-                    PromjeniTaktikuUSustavnoUništavanje();
+                case RezultatGađanja.Potonuće:
+                    PromjeniTaktikuUNapipavanje();
+                    break;
+                case RezultatGađanja.Pogodak:
+                    switch (TrenutnaTaktika)
+                    {
+                        case TaktikaGađanja.Napipavanje:
+                            PromjeniTaktikuUOkruživanje();
+                            break;
+                        case TaktikaGađanja.Okruživanje:
+                            PromjeniTaktikuUSustavnoUništavanje();
+                            break;
+                        case TaktikaGađanja.SustavnoUništavanje:
+                            break;
+                        default:
+                            Debug.Assert(false,string.Format("Nepodržana taktika {0}", TrenutnaTaktika.ToString()));
+                            break;
+                    }
+                    break;
+                case RezultatGađanja.Promašaj:
+                    break;
+                default:
+                    Debug.Assert(false, string.Format("Nepodržani rezltat gađanja {0}", rezultat.ToString()));
+                    break;
             }
         }
 
