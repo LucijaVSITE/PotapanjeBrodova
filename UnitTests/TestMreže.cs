@@ -107,5 +107,16 @@ namespace UnitTests
             Assert.AreEqual(6, polja.Count());
             Assert.IsTrue(polja.Contains(new Polje(1, 5)));
         }
+
+        [TestMethod]
+        public void Mreža_DajPoljaUZadanomSmijeruVraćaListuOd4PoljaDoljeZaPolje1_6()
+        {
+            Mreža m = new Mreža(10, 10);
+            m.EliminirajPolje(6,6);
+            var polja = m.DajPoljaUZadanomSmjeru(1, 6, Smijer.Dolje);
+            Assert.AreEqual(4, polja.Count());
+            Assert.IsTrue(polja.Contains(new Polje(2, 6)));
+        }
+
     }
 }
