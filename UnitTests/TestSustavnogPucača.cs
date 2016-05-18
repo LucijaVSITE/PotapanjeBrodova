@@ -11,6 +11,7 @@ namespace UnitTests
         [TestMethod]
         public void SustavniPucač_UputiPucanjVraćaLijevoIliDesnoPoljeZaHorizontalniSmjer()
         {
+
             List<Polje> pogođenaPolja = new List<Polje> { new Polje(3, 2), new Polje(3, 3) };
             Mreža mreža = new Mreža(10, 10);
             SustavniPucač p = new SustavniPucač(pogođenaPolja, mreža);
