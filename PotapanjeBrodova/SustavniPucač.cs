@@ -23,7 +23,9 @@ namespace PotapanjeBrodova
             Orijentacija o = DajOrijentaciju();
             var liste = DajPoljaUNastavku(o);
             if (liste.Count() == 1)
+            {
                 return liste.First().First();
+            }
             int indeks = slučajni.Next(liste.Count());
             return liste.ElementAt(indeks).First();
         }
